@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'poppins',sans-serif;
+}
+.container{
+  display:flex;
+  padding-right:0px;
+  padding-left: 130px;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  background-color: #1e90ff;
+  position:relative;
+}
+section{
+  border-radius:8px 0px 8px 8px;
+  position: relative;
+  width:1100px;
+  max-height:500px;
+  padding: 80px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background: #161616; 
+  box-shadow: 0 10px 20px -5px black;
+}
+section .circle{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: #1E90FF;
+  clip-path: circle(70% at right -40%);
+}
+header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:0px 100px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+header .logo{
+  position:relative;
+  left:-50px;
+  max-width:170px;
+
+}
+header .logotext{
+  position:relative;
+  left:-50px;
+  max-width:170px;
+
+}
+header .navigation{
+  position:relative;
+  display:flex;
+}
+header .navigation li{
+  list-style:none; 
+}
+header .navigation li a{
+  display:flex;
+  color:#fff;
+  font-weight:500;
+  text-decoration: none;
+  margin:40px;
+}
+.content{
+  position: relative;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.content .textbox{
+  position: relative;
+  max-width: 600px;
+  margin-right: 20px;
+}
+.content .textbox h3{
+  color:#fff;
+  font-size:35px;
+  margin-bottom:10px;
+  line-height:1.4em;
+  font-weight:700;
+}
+.content .textbox p{
+  color:#fff;
+}
+.content .textbox a
+{
+  display:inline-block;
+  margin-top: 20px;
+  padding:8px 20px;
+  background: #1589FF;
+  color:#fff;
+  border-radius:40px;
+  font-weight:500;
+  letter-spacing:1px;
+  text-decoration:none;
+}
+.sci{
+  position:absolute;
+  bottom:-20px;
+  left:-20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.sci li{
+  list-style:none;
+}
+.sci li a{
+  display:inline-block;
+  margin:15px;
+  background:#222;
+  width:40px;
+  height:40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  transition:0.2s ease-in-out;
+}
+.sci li a:hover{
+  background:#1E90FF;
+  transform: translateY(-10px);
+}
+.sci li a img{
+  filter:invert(1);
+  transform:scale(0.5);
+}
+
+/*****slider*******/
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide{
+  background-position: center;
+  background-color:transparent;
+  background-size: cover;
+  width:240px;
+  height:300px;
+}
+.swiper-slide img{
+  display: block;
+  width: 100%;
+  margin-top:160px;
+}
+.imgbox .swiper-slide-shadow-left{
+  background-image: none;
+}.imgbox .swiper-slide-shadow-right{
+  background-image:none;
+}
+.content .imgbox{
+  width:500px;
+  display:flex;
+  justify-content: flex-end;
+}
+.content .imgbox img{
+  max-width:200px;
+}
+@media (max-width:991px)
+{
+  
+  .container{
+    width:1000px;
+    padding-right: 500px;
+  }
+  header{
+    padding:60px;
+  }
+  header .logotext{
+    position:absolute;
+    left:160px;
+    top:120px;
+  }
+  section{
+    padding:150px 40px;
+    width:800px;
+    max-height:900px;
+  }
+  .sci{
+    left:60px;
+  }
+  .content{
+    padding-top: 50px;
+    flex-direction:row;
+  }
+  .content .textbox,
+  .content .imgbox
+  {
+    max-width:100%;
+  }
+  .swiper-slide{
+    height:300px;
+  }
+  header .navigation{
+    display:none;
+  }
+  header .navigation.active
+  {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#e51e2a;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    z-index:10;
+  }
+  .header .navigation li a{
+    margin:10px 0;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  .toggle
+  {
+    position:relative;
+    width:30px;
+    height:30px;
+    background:url('menu.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor:pointer;
+    z-index:10000;
+  }
+  .toggle.active{
+    position:fixed;
+    right:40px;
+    background:url('close.png');
+    background-size:25px;
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+}

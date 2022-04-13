@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="circle-container"></div>
+      <section>
+        <div class="circle"></div>
+        <header>
+          <a href="#"><img src="images/logo.png" class="logo"></a>
+          <a href="#"><img src="images/logotext1.png" class="logotext"></a>
+          <div class="toggle" onclick="toggleMenu()"></div>
+          <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </header>
+        <div class="content">
+          <div class="textbox"><br><br><br>
+            <h3>Collaborate For Free</h3>
+            <p>Microsoft Corporation is an American multinational technology corporation which produces computer software, consumer electronics, personal computers, and related services.</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="imgbox">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/delve.svg" /></div>
+                <div class="swiper-slide"><img src="images/forms.svg" /></div>
+                <div class="swiper-slide"><img src="images/kaizala.svg" /></div>
+                <div class="swiper-slide"><img src="images/lucid.png" /></div>
+                <div class="swiper-slide"><img src="images/outlook.svg" /></div>
+                <div class="swiper-slide"><img src="images/planner.svg" /></div>
+                <div class="swiper-slide"><img src="images/onedrive.svg" /></div>
+                <div class="swiper-slide"><img src="images/pp.svg" /></div>
+                <div class="swiper-slide"><img src="images/todo.svg" /></div>
+                <div class="swiper-slide"><img src="images/word.svg" /></div>
+                <div class="swiper-slide"><img src="images/stream.svg" /></div>
+                <div class="swiper-slide"><img src="images/yammer.svg" /></div>
+                <div class="swiper-slide"><img src="images/onenote.svg" /></div>
+              </div>
+            </div>
+          </div>
+         <ul class="sci">
+          <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+          <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+          <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+         </ul>
+      </section>   
+  </div>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 300,
+      modifier: 1,
+      slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop:true,
+      });
+
+          function toggleMenu(){
+            const menuToggle=document.querySelector('.toggle');
+            const navigation=document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+          }
+        </script>
+    
+</body>
+</html>
